@@ -24,6 +24,9 @@ vim.keymap.set("n", "<leader>rD", [["rD]])
 vim.keymap.set({"n", "v"}, "<leader>rp", [["rp]])
 vim.keymap.set({"n", "v"}, "<leader>rP", [["rP]])
 
+-- paste without losing default yank register text
+vim.keymap.set("x", "<leader>p", [["_dP]])
+
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 vim.keymap.set("n", "<leader>co", ":copen<CR>")
