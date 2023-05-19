@@ -37,6 +37,12 @@ lsp.ensure_installed({
     'bashls'
 })
 
+require('lspconfig').intelephense.setup({
+    init_options = {
+        licenceKey = os.getenv('HOME') .. '/intelephense/license.txt'
+    }
+})
+
 lsp.setup()
 
 -- tab completion
