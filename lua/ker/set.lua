@@ -26,7 +26,7 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = '120'
+vim.opt.colorcolumn = '80'
 
 vim.opt.redrawtime = 10000
 
