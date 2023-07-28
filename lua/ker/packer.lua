@@ -91,4 +91,6 @@ return require('packer').startup(function(use)
             { 'prabirshrestha/async.vim' }
         }
     })
+
+    use({'duane9/nvim-rg'})
 end)
