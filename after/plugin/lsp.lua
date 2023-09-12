@@ -43,6 +43,10 @@ require('lspconfig').intelephense.setup({
     }
 })
 
+require('lspconfig').dartls.setup({
+    cmd = { "dart", "language-server", "--protocol=lsp" },
+});
+
 lsp.setup()
 
 -- tab completion
