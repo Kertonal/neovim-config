@@ -3,8 +3,8 @@ local fb_actions = require('telescope._extensions.file_browser.actions')
 require('telescope').setup({
     extensions = {
         file_browser = {
+            initial_mode = "normal",
             hijack_netrw = true,
-            git_status = false,
             mappings = {
                 ['i'] = {
                 },
