@@ -13,7 +13,7 @@ return {
                 --       refer to the README for telescope-fzf-native for more instructions.
                 build = 'make',
                 cond = function()
-                    return vim.fn.executable 'make' == 1
+                    return vim.fn.executable('make') == 1
                 end,
             },
         },
@@ -75,9 +75,9 @@ return {
             local function live_grep_git_root()
                 local git_root = find_git_root()
                 if git_root then
-                    require('telescope.builtin').live_grep {
+                    require('telescope.builtin').live_grep({
                         search_dirs = { git_root },
-                    }
+                    })
                 end
             end
 
@@ -85,10 +85,10 @@ return {
 
             vim.keymap.set('n', '<leader>/', function()
                 -- You can pass additional configuration to telescope to change theme, layout, etc.
-                require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
+                require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown({
                     winblend = 10,
                     previewer = false,
-                })
+                }))
             end, { desc = '[/] Fuzzily search in current buffer' })
 
             local builtin = require('telescope.builtin')

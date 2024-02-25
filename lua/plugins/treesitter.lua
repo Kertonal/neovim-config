@@ -7,7 +7,7 @@ return {
     build = ':TSUpdate',
     config = function ()
         vim.defer_fn(function()
-            require('nvim-treesitter.configs').setup {
+            require('nvim-treesitter.configs').setup({
                 -- Add languages to be installed here that you want installed for treesitter
                 ensure_installed = { 'lua', 'vim', 'vimdoc', 'bash', 'javascript', 'typescript', 'php', 'twig', 'html', 'sql', 'python' },
 
@@ -75,7 +75,7 @@ return {
                         -- },
                     },
                 },
-            }
+            })
         end, 0)
     end
 }

@@ -82,11 +82,11 @@ return {
         -- Ensure the servers above are installed
         local mason_lspconfig = require('mason-lspconfig')
 
-        mason_lspconfig.setup {
+        mason_lspconfig.setup({
             ensure_installed = vim.tbl_keys(servers),
-        }
+        })
 
-        mason_lspconfig.setup_handlers {
+        mason_lspconfig.setup_handlers({
             function(server_name)
                 require('lspconfig')[server_name].setup({
                     capabilities = capabilities,
@@ -95,7 +95,7 @@ return {
                     filetypes = (servers[server_name] or {}).filetypes,
                 })
             end,
-        }
+        })
 
         require('lspconfig').intelephense.setup({
             capabilities = capabilities,

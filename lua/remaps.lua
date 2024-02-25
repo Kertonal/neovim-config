@@ -45,7 +45,7 @@ vim.keymap.set('n', '<leader>cn', ':cnext<CR>')
 vim.keymap.set('n', '<leader>cp', ':cprev<CR>')
 
 vim.keymap.set('n', '<leader>so', function()
-    vim.cmd("so")
+    vim.cmd('so')
 end)
 
 -- setup highlight on yank
