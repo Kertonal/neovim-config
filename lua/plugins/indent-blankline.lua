@@ -1,13 +1,10 @@
 return {
-    -- Add indentation guides even on blank lines
+    -- adds indent guides
     'lukas-reineke/indent-blankline.nvim',
-    -- Enable `lukas-reineke/indent-blankline.nvim`
-    -- See `:help ibl`
     main = 'ibl',
     opts = {
         scope = {
             enabled = false,
-            -- show_start = false,
         }
     },
 }
