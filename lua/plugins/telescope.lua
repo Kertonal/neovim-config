@@ -31,6 +31,7 @@ return {
                     file_browser = {
                         initial_mode = 'normal',
                         hijack_netrw = true,
+                        dir_icon = '',
                         mappings = {
                             ['i'] = {
                             },
