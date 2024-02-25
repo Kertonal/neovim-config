@@ -48,8 +48,6 @@ vim.keymap.set('n', '<leader>so', function()
     vim.cmd("so")
 end)
 
-vim.keymap.set('n', '<leader>gs', vim.cmd.Git)
-
 -- setup highlight on yank
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
