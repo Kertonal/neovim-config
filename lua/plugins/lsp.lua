@@ -28,7 +28,13 @@ return {
             nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
             nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
             nmap('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
-            -- nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
+
+            -- show all doc symbols
+            nmap('<leader>ds', function ()
+                require('telescope.builtin').lsp_document_symbols()
+            end, '[D]ocument [F]unctions')
+
+            -- show only functions & methods doc symbols
             nmap('<leader>df', function ()
                 require('telescope.builtin').lsp_document_symbols({
                     symbols = {
