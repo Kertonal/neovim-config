@@ -11,8 +11,15 @@ return {
 
                 auto_install = true,
                 sync_install = false,
-                highlight = { enable = true },
-                indent = { enable = true },
+
+                highlight = {
+                    enable = true,
+                    additional_vim_regex_highlighting = { 'php' }, -- regex highlighting is required for php indenting
+                },
+                indent = {
+                    enable = true,
+                    disable = { 'php' }, -- treesitter indenting is broken for php
+                },
                 incremental_selection = {
                     enable = true,
                     keymaps = {
