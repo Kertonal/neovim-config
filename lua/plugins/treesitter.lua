@@ -18,7 +18,9 @@ return {
                 },
                 indent = {
                     enable = true,
-                    disable = { 'php' }, -- treesitter indenting is broken for php
+
+                    -- treesitter indenting is broken for these languages
+                    disable = { 'php', 'dart' },
                 },
                 incremental_selection = {
                     enable = true,
