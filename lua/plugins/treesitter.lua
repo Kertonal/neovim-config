@@ -1,5 +1,4 @@
 return {
-    -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
         'nvim-treesitter/nvim-treesitter-textobjects',
@@ -8,17 +7,10 @@ return {
     config = function ()
         vim.defer_fn(function()
             require('nvim-treesitter.configs').setup({
-                -- Add languages to be installed here that you want installed for treesitter
                 ensure_installed = { 'lua', 'vim', 'vimdoc', 'bash', 'javascript', 'typescript', 'php', 'twig', 'html', 'sql', 'python' },
 
-                -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
                 auto_install = true,
-                -- Install languages synchronously (only applied to `ensure_installed`)
                 sync_install = false,
-                -- List of parsers to ignore installing
-                ignore_install = {},
-                -- You can specify additional Treesitter modules here: -- For example: -- playground = {--enable = true,-- },
-                modules = {},
                 highlight = { enable = true },
                 indent = { enable = true },
                 incremental_selection = {
@@ -35,7 +27,6 @@ return {
                         enable = true,
                         lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
                         keymaps = {
-                            -- You can use the capture groups defined in textobjects.scm
                             ['aa'] = '@parameter.outer',
                             ['ia'] = '@parameter.inner',
                             ['af'] = '@function.outer',
