@@ -38,6 +38,3 @@ vim.opt.scrolloff = 8
 -- case insensitive searching
 vim.o.ignorecase = true
 vim.o.smartcase = true
-
--- set netrw to tree style
-vim.g.netrw_liststyle = 3
