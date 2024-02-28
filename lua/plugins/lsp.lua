@@ -24,19 +24,32 @@ return {
             nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
             nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
-            nmap('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
-            nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
+            nmap('gd', function ()
+                require('telescope.builtin').lsp_definitions({
+                    show_line = false
+                })
+            end, '[G]oto [D]efinition')
+
+            nmap('gr', function ()
+                require('telescope.builtin').lsp_references({
+                    show_line = false
+                })
+            end, '[G]oto [R]eferences')
+
             nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
             nmap('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
 
             -- show all doc symbols
             nmap('<leader>ds', function ()
-                require('telescope.builtin').lsp_document_symbols()
-            end, '[D]ocument [F]unctions')
+                require('telescope.builtin').lsp_document_symbols({
+                    symbol_width = 50,
+                })
+            end, '[D]ocument [S]ymbols')
 
             -- show only functions & methods doc symbols
             nmap('<leader>df', function ()
                 require('telescope.builtin').lsp_document_symbols({
+                    symbol_width = 50,
                     symbols = {
                         'function',
                         'method',
