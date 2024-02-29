@@ -38,3 +38,5 @@ vim.opt.scrolloff = 8
 -- case insensitive searching
 vim.o.ignorecase = true
 vim.o.smartcase = true
+
+vim.opt.showmode = false
