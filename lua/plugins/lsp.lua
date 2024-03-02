@@ -81,8 +81,6 @@ return {
         require('mason-lspconfig').setup()
 
         local servers = {
-            gopls = {},
-            pyright = {},
             tsserver = {},
             html = { filetypes = { 'html', 'twig', 'hbs'} },
 
