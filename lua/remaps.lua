@@ -15,8 +15,8 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
-vim.keymap.set({'n', 'v'}, '<C-j>', '3<C-e>')
-vim.keymap.set({'n', 'v'}, '<C-k>', '3<C-y>')
+vim.keymap.set({'n', 'v'}, '<C-e>', '3<C-e>')
+vim.keymap.set({'n', 'v'}, '<C-y>', '3<C-y>')
 
 -- special way to move line in visual mode
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
