@@ -32,18 +32,14 @@ return {
                 ['<C-p>'] = cmp.mapping.select_prev_item(),
                 ['<C-Space>'] = cmp.mapping.complete({}),
                 ['<C-y'] = cmp.mapping.confirm({ select = true }),
-                ['<C-l>'] = cmp.mapping(function(fallback)
+                ['<C-l>'] = cmp.mapping(function()
                     if luasnip.expand_or_locally_jumpable() then
                         luasnip.expand_or_jump()
-                    else
-                        fallback()
                     end
                 end, { 'i', 's' }),
-                ['<C-h>'] = cmp.mapping(function(fallback)
+                ['<C-h>'] = cmp.mapping(function()
                     if luasnip.locally_jumpable(-1) then
                         luasnip.jump(-1)
-                    else
-                        fallback()
                     end
                 end, { 'i', 's' }),
             }),
