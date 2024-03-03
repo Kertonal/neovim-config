@@ -39,13 +39,6 @@ return {
             nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
             nmap('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
 
-            -- show all doc symbols
-            nmap('<leader>ds', function ()
-                require('telescope.builtin').lsp_document_symbols({
-                    symbol_width = 50,
-                })
-            end, '[D]ocument [S]ymbols')
-
             -- show only functions & methods doc symbols
             nmap('<leader>df', function ()
                 require('telescope.builtin').lsp_document_symbols({
@@ -57,17 +50,9 @@ return {
                 })
             end, '[D]ocument [F]unctions')
 
-            -- See `:help K` for why this keymap
             nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
-            -- nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
-            -- Lesser used LSP functionality
             nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
-            -- nmap('<leader>wa', vim.lsp.buf.add_workspace_folder, '[W]orkspace [A]dd Folder')
-            -- nmap('<leader>wr', vim.lsp.buf.remove_workspace_folder, '[W]orkspace [R]emove Folder')
-            -- nmap('<leader>wl', function()
-            --   print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-            -- end, '[W]orkspace [L]ist Folders')
 
             -- Create a command `:Format` local to the LSP buffer
             vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
