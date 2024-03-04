@@ -101,7 +101,7 @@ return {
 
             vim.api.nvim_set_keymap(
                 'n',
-                '<space>pe',
+                '<space>E',
                 ':Telescope file_browser path=%:p:h select_buffer=true<CR>',
                 { noremap = true }
             )
