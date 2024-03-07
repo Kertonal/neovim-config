@@ -27,22 +27,6 @@ return {
                         },
                     },
                 },
-                extensions = {
-                    file_browser = {
-                        initial_mode = 'normal',
-                        hijack_netrw = true,
-                        dir_icon = '',
-                        mappings = {
-                            ['i'] = {
-                            },
-                            ['n'] = {
-                            }
-                        },
-                        hidden = {
-                            file_browser = true
-                        }
-                    }
-                }
             })
 
             -- Enable telescope fzf native, if installed
@@ -96,16 +80,6 @@ return {
 
             vim.keymap.set('n', '<C-p>', builtin.git_files, {})
 
-            -- open telescope file browser
-            require('telescope').load_extension('file_browser')
-
-            vim.api.nvim_set_keymap(
-                'n',
-                '<space>E',
-                ':Telescope file_browser path=%:p:h select_buffer=true<CR>',
-                { noremap = true }
-            )
-
             -- TODO: maybe enable later
             -- vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
 
@@ -115,12 +89,5 @@ return {
             vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
             vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]esume' })
         end
-    },
-    {
-        'nvim-telescope/telescope-file-browser.nvim',
-        dependencies = {
-            'nvim-telescope/telescope.nvim',
-            'nvim-lua/plenary.nvim'
-        }
     },
 }
