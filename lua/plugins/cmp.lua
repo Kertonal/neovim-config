@@ -14,9 +14,12 @@ return {
         local cmp = require('cmp')
         local luasnip = require('luasnip')
 
-        -- require('luasnip.loaders.from_vscode').lazy_load()
+        luasnip.config.setup({
+            history = true,
+            updateevents = 'TextChanged,TextChangedI',
+        })
 
-        luasnip.config.setup({})
+        require('luasnip.loaders.from_lua').load({paths = { './snippets' }})
 
         cmp.setup({
             snippet = {
@@ -40,6 +43,11 @@ return {
                 ['<C-h>'] = cmp.mapping(function()
                     if luasnip.locally_jumpable(-1) then
                         luasnip.jump(-1)
+                    end
+                end, { 'i', 's' }),
+                ['<C-j>'] = cmp.mapping(function()
+                    if luasnip.choice_active() then
+                        luasnip.change_choice(1)
                     end
                 end, { 'i', 's' }),
             }),
