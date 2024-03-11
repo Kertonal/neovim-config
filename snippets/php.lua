@@ -84,4 +84,12 @@ return {
             i(2),
         })
     ),
+    s('showerr',
+        fmt('ini_set(\'display_errors\', \'On\');\nerror_reporting(E_ALL & ~E_DEPRECATED);', {})
+    ),
+    s('preout',
+        fmt('echo \'<pre>\' . var_export(${}, true) . \'</pre>\';', {
+            i(1, 'var')
+        })
+    ),
 }
