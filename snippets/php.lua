@@ -28,18 +28,14 @@ return {
         })
     ),
     s('fe',
-        fmt('foreach (${} as ${}) {{\n\t{}\n}}', {
+        fmt('foreach (${} as {}${}) {{\n\t{}\n}}', {
             i(1, 'arr'),
+            c(1, {
+                t(''),
+                fmt('${} => ', i(1, 'key')),
+            }),
             i(2, 'item'),
             i(3),
-        })
-    ),
-    s('fe=',
-        fmt('foreach (${} as ${} => ${}) {{\n\t{}\n}}', {
-            i(1, 'arr'),
-            i(2, 'key'),
-            i(3, 'item'),
-            i(4),
         })
     ),
     s('con',
