@@ -1,3 +1,18 @@
+function getReturnTypeNodes()
+    return {
+        t(''),
+        t(': string'),
+        t(': int'),
+        t(': float'),
+        t(': array'),
+        t(': bool'),
+        t(': void'),
+        t(': mixed'),
+        t(': callable'),
+        t(': resource'),
+    }
+end
+
 return {
     s('if',
         fmt('if ({}) {{\n\t{}\n}}', {
@@ -6,10 +21,10 @@ return {
         })
     ),
     s('f',
-        fmt('function {}({}): {} {{\n\t{}\n}}', {
+        fmt('function {}({}){} {{\n\t{}\n}}', {
             i(1, 'Name'),
             i(2),
-            i(3, 'type'),
+            c(3, getReturnTypeNodes()),
             i(4)
         })
     ),
@@ -45,20 +60,20 @@ return {
         })
     ),
     s('m',
-        fmt('{} function {}({}): {} {{\n\t{}\n}}', {
+        fmt('{} function {}({}){} {{\n\t{}\n}}', {
             c(1, {
                 t('public'),
                 t('private'),
             }),
             i(2, 'Name'),
             i(3),
-            i(4, 'type'),
+            c(4, getReturnTypeNodes()),
             i(5),
         })
     ),
     s('sw',
         fmt([[
-        switch ({}) {{
+        switch (${}) {{
             case '{}':
                 {}
                 break;{}
@@ -67,7 +82,7 @@ return {
                 {}
                 break;
         }}]], {
-            i(1),
+            i(1, 'var'),
             i(2),
             i(3),
             i(4),
