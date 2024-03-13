@@ -7,6 +7,9 @@ return {
                 -- hides icons
                 content = {
                     prefix = function() end
+                },
+                mappings = {
+                    go_in_plus = '<CR>'
                 }
             })
 
