@@ -1,15 +1,12 @@
-function getReturnTypeNodes()
+local function getTypeNodes()
     return {
-        t(''),
-        t(': string'),
-        t(': int'),
-        t(': float'),
-        t(': array'),
-        t(': bool'),
-        t(': void'),
-        t(': mixed'),
-        t(': callable'),
-        t(': resource'),
+        t('string'),
+        t('int'),
+        t('float'),
+        t('array'),
+        t('bool'),
+        t('void'),
+        t('mixed'),
     }
 end
 
@@ -24,7 +21,13 @@ return {
         fmt('function {}({}){} {{\n\t{}\n}}', {
             i(1, 'Name'),
             i(2),
-            c(3, getReturnTypeNodes()),
+            c(3, {
+                sn(nil, {
+                    t(': '),
+                    i(1, 'type')
+                }),
+                t(''),
+            }),
             i(4)
         })
     ),
@@ -67,7 +70,13 @@ return {
             }),
             i(2, 'Name'),
             i(3),
-            c(4, getReturnTypeNodes()),
+            c(4, {
+                sn(nil, {
+                    t(': '),
+                    i(1, 'type')
+                }),
+                t(''),
+            }),
             i(5),
         })
     ),
@@ -103,4 +112,25 @@ return {
             i(1, 'var')
         })
     ),
+    s('d',
+        c(1, getTypeNodes())
+    ),
+    s('a',
+        fmt('{}${}', {
+            c(1, {
+                sn(nil, {
+                    i(1, 'string'),
+                    t(' '),
+                }),
+                t(''),
+            }),
+            i(0, 'arg'),
+        })
+    ),
+    s('v',
+        fmt('${} = {};', {
+            i(1, 'var'),
+            i(2, 'null'),
+        })
+    )
 }
