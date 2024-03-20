@@ -9,7 +9,9 @@ return {
                     prefix = function() end
                 },
                 mappings = {
-                    go_in_plus = '<CR>'
+                    go_in = '',
+                    go_in_plus = '<CR>',
+                    go_out = '-',
                 }
             })
 
