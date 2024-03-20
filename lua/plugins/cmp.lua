@@ -17,9 +17,12 @@ return {
         luasnip.config.setup({
             history = true,
             updateevents = 'TextChanged,TextChangedI',
+            ft_func = function ()
+               return require("luasnip.extras.filetype_functions").from_cursor_pos()
+            end
         })
 
-        require('luasnip.loaders.from_lua').load({paths = { './snippets' }})
+        require('luasnip.loaders.from_lua').load({ paths = { './snippets' } })
 
         -- Opens luasnip choice node items in select window
         vim.keymap.set('i', '<C-u>', '<cmd>lua require("luasnip.extras.select_choice")()<CR>');
