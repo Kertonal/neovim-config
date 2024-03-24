@@ -1,15 +1,3 @@
-local function getTypeNodes()
-    return {
-        t('string'),
-        t('int'),
-        t('float'),
-        t('array'),
-        t('bool'),
-        t('void'),
-        t('mixed'),
-    }
-end
-
 return {
     s('if',
         fmt('if ({}) {{\n\t{}\n}}', {
@@ -111,9 +99,6 @@ return {
         fmt('echo \'<pre>\' . var_export(${}, true) . \'</pre>\';', {
             i(1, 'var')
         })
-    ),
-    s('d',
-        c(1, getTypeNodes())
     ),
     s('a',
         fmt('{}${}', {
