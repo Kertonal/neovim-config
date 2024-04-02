@@ -20,7 +20,7 @@ return {
         })
     ),
     s('try',
-        fmt('try {{\n\t{}\n}} catch ({} ${}){{\n\t{}\n}}', {
+        fmt('try {{\n\t{}\n}} catch ({} ${}) {{\n\t{}\n}}', {
             i(1),
             i(2, 'Exception'),
             i(3, 'e'),
