@@ -16,6 +16,9 @@ vim.keymap.set('n', '<C-u>', '<C-u>M')
 vim.keymap.set({'n', 'v'}, '<C-e>', '3<C-e>')
 vim.keymap.set({'n', 'v'}, '<C-y>', '3<C-y>')
 
+-- disable search highlight until next search
+vim.keymap.set('n', '<leader>/', ':noh<CR>')
+
 -- yanking to the clipboard
 vim.keymap.set({'n', 'v'}, '<leader>y', [["+y]])
 vim.keymap.set('n', '<leader>Y', [["+Y]])

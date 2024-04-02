@@ -68,10 +68,6 @@ return {
 
             vim.api.nvim_create_user_command('LiveGrepGitRoot', live_grep_git_root, {})
 
-            vim.keymap.set('n', '<leader>/', function()
-                require('telescope.builtin').current_buffer_fuzzy_find()
-            end, { desc = '[/] Fuzzily search in current buffer' })
-
             local builtin = require('telescope.builtin')
 
             vim.keymap.set('n', '<leader>sf', function()
