@@ -68,6 +68,15 @@ return {
             i(5),
         })
     ),
+    s('for',
+        fmt('for (${} = 0; ${} < {}; ${}++) {{\n\t{}\n}}', {
+            i(1, 'i'),
+            extras.rep(1),
+            i(2, '5'),
+            extras.rep(1),
+            i(3),
+        })
+    ),
     s('sw',
         fmt([[
         switch (${}) {{
