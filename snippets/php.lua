@@ -35,13 +35,13 @@ return {
     ),
     s('fe',
         fmt('foreach (${} as {}${}) {{\n\t{}\n}}', {
-            i(1, 'arr'),
-            c(1, {
+            i(1, 'items'),
+            c(2, {
                 t(''),
                 fmt('${} => ', i(1, 'key')),
             }),
-            i(2, 'item'),
-            i(3),
+            i(3, 'item'),
+            i(4),
         })
     ),
     s('con',
