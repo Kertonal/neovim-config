@@ -77,7 +77,7 @@ return {
             i(3),
         })
     ),
-    s('sw',
+    s('switch',
         fmt([[
         switch (${}) {{
             case '{}':
