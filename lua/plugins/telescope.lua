@@ -71,7 +71,7 @@ return {
             local builtin = require('telescope.builtin')
 
             vim.keymap.set('n', '<leader>sf', function()
-                builtin.find_files({find_command = {'rg', '--files', '--hidden', '--no-ignore-vcs', '-g', '!.git/' }})
+                builtin.find_files({ hidden = true })
             end)
 
             vim.keymap.set('n', '<C-p>', builtin.git_files, {})
