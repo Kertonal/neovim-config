@@ -189,4 +189,10 @@ return {
             }),
         })
     ),
+    s('intf',
+        fmt('interface {} {{\n\t{}\n}}', {
+            i(1, 'Name'),
+            i(2),
+        })
+    ),
 }
