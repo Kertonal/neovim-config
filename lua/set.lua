@@ -39,3 +39,5 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 vim.opt.showmode = false
+
+vim.cmd[[colorscheme tokyonight]]

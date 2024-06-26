@@ -3,7 +3,7 @@ return {
     opts = {
         options = {
             icons_enabled = false,
-            theme = 'monokai-pro',
+            theme = 'tokyonight',
             component_separators = '|',
             section_separators = '',
         },
