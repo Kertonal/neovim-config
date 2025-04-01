@@ -44,10 +44,16 @@ return {
             i(4),
         })
     ),
-    s('con',
+    s('fcon',
         fmt('function __construct({}) {{\n\t{}\n}}', {
             i(1),
             i(2),
+        })
+    ),
+    s('con',
+        fmt('const {} = \'{}\';', {
+            i(1, 'NAME'),
+            i(2, 'value'),
         })
     ),
     s('me',
@@ -152,7 +158,7 @@ return {
             }),
         })
     ),
-    s('class',
+    s('cl',
         fmt([[
         {}class {} {}{{
             {}
