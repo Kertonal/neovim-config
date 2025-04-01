@@ -55,6 +55,7 @@ return {
             c(1, {
                 t('public'),
                 t('private'),
+                t('public static'),
             }),
             i(2, 'Name'),
             i(3),
