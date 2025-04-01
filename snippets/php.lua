@@ -179,6 +179,18 @@ return {
             i(7),
         })
     ),
+    s('th',
+        fmt('$this->{};', {
+            c(1, {
+                i(1, 'prop'),
+                sn(nil, {
+                    i(1, 'prop'),
+                    t(' = '),
+                    i(2, 'true'),
+                }),
+            }),
+        })
+    ),
     s('rn',
         fmt('return{}', {
             c(1, {
