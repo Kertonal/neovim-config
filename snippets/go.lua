@@ -73,7 +73,18 @@ return {
             i(4),
         })
     ),
-    s('rn', t('return nil')),
-    s('re', t('return err')),
-    s('rne', t('return nil, err')),
+    s('rn',
+        fmt('return{}', {
+            c(1, {
+                t(''),
+                sn(nil, {
+                    t(' '),
+                    i(1, 'val')
+                }),
+                t(' nil'),
+                t(' err'),
+                t(' nil, err'),
+            }),
+        })
+    ),
 }
