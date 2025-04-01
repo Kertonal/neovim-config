@@ -61,7 +61,7 @@ return {
         require('mason-lspconfig').setup()
 
         local servers = {
-            tsserver = {},
+            ts_ls = {},
             html = { filetypes = { 'html', 'twig', 'hbs'} },
 
             lua_ls = {
