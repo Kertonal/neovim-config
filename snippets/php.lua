@@ -5,7 +5,7 @@ return {
             i(2)
         })
     ),
-    s('f',
+    s('fu',
         fmt('function {}({}){} {{\n\t{}\n}}', {
             i(1, 'Name'),
             i(2),
@@ -27,7 +27,7 @@ return {
             i(4)
         })
     ),
-    s('while',
+    s('wh',
         fmt('while ({}) {{\n\t{}\n}}', {
             i(1),
             i(2)
@@ -50,7 +50,7 @@ return {
             i(2),
         })
     ),
-    s('m',
+    s('me',
         fmt('{} function {}({}){} {{\n\t{}\n}}', {
             c(1, {
                 t('public'),
@@ -77,7 +77,7 @@ return {
             i(3),
         })
     ),
-    s('switch',
+    s('sw',
         fmt([[
         switch (${}) {{
             case '{}':
@@ -95,7 +95,7 @@ return {
             i(5),
         })
     ),
-    s('case',
+    s('ca',
         fmt('case \'{}\':\n\t{}\n\tbreak;', {
             i(1),
             i(2),
@@ -109,7 +109,7 @@ return {
             i(1, 'var')
         })
     ),
-    s('a',
+    s('ar',
         fmt('{}${}', {
             c(1, {
                 sn(nil, {
@@ -121,13 +121,13 @@ return {
             i(2, 'arg'),
         })
     ),
-    s('v',
+    s('va',
         fmt('${} = {};', {
             i(1, 'var'),
             i(2, 'null'),
         })
     ),
-    s('p',
+    s('pr',
         fmt('{} {}${}{}', {
             c(1, {
                 t('private'),

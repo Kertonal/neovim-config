@@ -1,11 +1,11 @@
 return {
-    s('v',
+    s('va',
         fmt('{} := {}', {
             i(1, 'varName'),
             i(2, '0'),
         })
     ),
-    s('a',
+    s('ar',
         fmt('{} {}', {
             i(1, 'arg'),
             i(2, 'int'),
@@ -35,7 +35,7 @@ return {
             i(4),
         })
     ),
-    s('s',
+    s('st',
         fmt('type {} struct {{\n\t{}\n}}', {
             i(1, 'name'),
             i(2),
@@ -47,7 +47,7 @@ return {
             i(2, 'int'),
         })
     ),
-    s('st',
+    s('stt',
         fmt('`{}:"{}"`', {
             i(1, 'json'),
             i(2, 'fieldName'),
@@ -59,7 +59,7 @@ return {
             i(2),
         })
     ),
-    s('f',
+    s('fu',
         fmt('func {}({}){} {{\n\t{}\n}}', {
             i(1, 'name'),
             i(2),

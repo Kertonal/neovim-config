@@ -5,7 +5,7 @@ return {
             i(2)
         })
     ),
-    s('f',
+    s('fu',
         fmt('function {}({}) {{\n\t{}\n}}', {
             i(1, 'Name'),
             i(2),
@@ -19,13 +19,13 @@ return {
             i(3)
         })
     ),
-    s('while',
+    s('wh',
         fmt('while ({}) {{\n\t{}\n}}', {
             i(1),
             i(2)
         })
     ),
-    s('switch',
+    s('sw',
         fmt([[
         switch ({}) {{
             case '{}':
@@ -43,7 +43,7 @@ return {
             i(5),
         })
     ),
-    s('case',
+    s('ca',
         fmt('case \'{}\':\n\t{}\n\tbreak;', {
             i(1),
             i(2),
