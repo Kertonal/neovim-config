@@ -21,22 +21,12 @@ return {
                 vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
             end
 
-            nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
-            nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
-
             nmap('gd', function ()
                 require('telescope.builtin').lsp_definitions({
                     show_line = false
                 })
             end, '[G]oto [D]efinition')
 
-            nmap('gr', function ()
-                require('telescope.builtin').lsp_references({
-                    show_line = false
-                })
-            end, '[G]oto [R]eferences')
-
-            nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
             nmap('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
 
             -- show only functions & methods doc symbols
@@ -49,8 +39,6 @@ return {
                     }
                 })
             end, '[D]ocument [F]unctions')
-
-            nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
 
             nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
         end

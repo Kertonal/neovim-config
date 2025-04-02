@@ -5,8 +5,6 @@ vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = tr
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- diagnostic keymaps
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 vim.keymap.set('n', '<leader>dd', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
@@ -34,12 +32,12 @@ vim.keymap.set({'n', 'v'}, '<leader>rP', [["rP]])
 -- paste without losing default yank register text
 vim.keymap.set('x', '<leader>p', [["_dP]])
 
+-- execute tmux sessionizer
 vim.keymap.set('n', '<C-f>', '<cmd>silent !tmux neww tmux-sessionizer<CR>')
 
+-- quick fix mappings
 vim.keymap.set('n', '<leader>co', ':copen<CR>')
 vim.keymap.set('n', '<leader>cq', ':cclose<CR>')
-vim.keymap.set('n', '<leader>cn', ':cnext<CR>')
-vim.keymap.set('n', '<leader>cp', ':cprev<CR>')
 
 vim.keymap.set('n', '<leader>so', function()
     vim.cmd('so')
