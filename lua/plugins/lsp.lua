@@ -55,6 +55,8 @@ return {
             nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
         end
 
+        vim.diagnostic.config({ virtual_text = true })
+
         -- mason-lspconfig requires that these setup functions are called in this order
         -- before setting up the servers.
         require('mason').setup()
