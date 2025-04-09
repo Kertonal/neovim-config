@@ -10,6 +10,8 @@ return {
                     'vimdoc',
                     'bash',
                     'javascript',
+                    'jsdoc',
+                    'json',
                     'php',
                     'phpdoc',
                     'html',
@@ -17,7 +19,6 @@ return {
                 },
 
                 auto_install = true,
-                sync_install = false,
 
                 highlight = {
                     enable = true,
