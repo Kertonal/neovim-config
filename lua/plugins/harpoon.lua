@@ -24,5 +24,8 @@ return {
         vim.keymap.set('n', '<leader>7', function() harpoon:list():select(7) end)
         vim.keymap.set('n', '<leader>8', function() harpoon:list():select(8) end)
         vim.keymap.set('n', '<leader>9', function() harpoon:list():select(9) end)
+
+        local harpoon_extensions = require("harpoon.extensions")
+        harpoon:extend(harpoon_extensions.builtins.highlight_current_file())
     end
 }
