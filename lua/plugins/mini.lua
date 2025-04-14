@@ -14,7 +14,7 @@ return {
                     go_out = '-',
                 },
                 windows = {
-                    preview = true,
+                    preview = false,
                     width_preview = 70,
                 }
             })
