@@ -45,7 +45,7 @@ return {
         })
     ),
     s('fcon',
-        fmt('function __construct({}) {{\n\t{}\n}}', {
+        fmt('public function __construct({}) {{\n\t{}\n}}', {
             i(1),
             i(2),
         })
